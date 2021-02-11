@@ -7,16 +7,28 @@
     <ul>
         {{#each places}}
         <li>{{name}} ({{type}})</li>
-        <a href="/places/edit/{{id}}">Edit</a>
+
+        <div class="row edit-btn">
+        <a href="/places/edit/{{id}}" class="btn btn-sm btn-dark">Edit</a>
         <form method="POST" action="/places/delete/{{id}}">
-            <button type="submit">Delete</button>
+            <button type="submit" class="btn btn-sm btn-dark">Delete</button>
         </form>
+        </div>
+
         {{/each}}
     </ul>
 
-    <a href="/places/new-place">Add new place</a>
+    <a href="/places/new-place" class="btn btn-sm btn-dark">Add new place</a>
 
     {{#if error}}
     <div class="error-message">{{error}}</div>
     {{/if}}
+    
+    <figure id="places-map"></figure>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/javascripts/places-map-config.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCL85Aun0K58V1YhjUtm0fryvRoBHNUREE&callback=initMap"></script>
+
 </div>

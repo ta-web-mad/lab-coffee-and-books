@@ -2,8 +2,14 @@ body {
   padding: 50px;
   font-family: sans-serif; }
 
-#map, #restaurants-map {
+#map, #places-map {
   height: 400px;
   background-color: #7777cf; }
+
+#edit-btn a {
+  margin-right: 50px; }
+
+.btn {
+  margin: 5px 2px; }
 
 /*# sourceMappingURL=style.css.map */
