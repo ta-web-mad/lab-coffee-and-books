@@ -21,6 +21,10 @@ function getDirections() {
 
 function pinPlaces(places) {
 
+    if (!location) {
+        return
+    }
+
     places.forEach(elm => {
         let position = { lat: elm.location.coordinates[0], lng: elm.location.coordinates[1] }
         new google.maps.Marker({ position, title: elm.title, map })

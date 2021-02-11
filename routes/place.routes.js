@@ -21,16 +21,25 @@ router.get('/new-place', (req, res) => res.render('places/create-place'))
 router.post('/new-place', (req, res) => {
 
   const { name, type, latitude, longitude } = req.body
+  
+  
+  
+  if (!latitude || !longitude) {
+    res.render('places/create-place', {errorMsg: "Location required"})
+  } else {
+    const location = {
+      type: 'Point',
+      coordinates: [latitude, longitude]
+    }
 
-  const location = {
-    type: 'Point',
-    coordinates: [latitude, longitude]
+    Place
+      .create({ name, type, location })
+      .then(newPlace => res.redirect('/'))
+      .catch(err => console.log(err))
+
+
   }
 
-  Place
-    .create({ name, type, location })
-    .then(newPlace => res.redirect('/places'))
-    .catch(err => console.log(err))
 })
 
 //Edit place
