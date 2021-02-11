@@ -41,4 +41,29 @@ router.get("/details/:id", async (req, res, next) => {
     next(err)
   }
 })
+
+router.get("/edit/:id", async (req, res, next) => {
+  try {
+    const place = await Place.findById(req.params.id)
+    res.render("edit-place", place)
+  } catch (err) {
+    next(err)
+  }
+})
+
+router.post("/edit/:id", async (req, res, next) => {
+  const placeType =
+    req.query.type === "coffee-shops" ? "coffee shop" : "bookstore"
+  const { name } = req.body
+  try {
+    await Place.findByIdAndUpdate(
+      req.params.id,
+      { name },
+      { omitUndefined: true }
+    )
+    res.redirect(`/details/${req.params.id}`)
+  } catch (err) {
+    next(err)
+  }
+})
 module.exports = router
