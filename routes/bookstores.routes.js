@@ -5,7 +5,7 @@ const Place = require("../models/place.model")
 router.get("/", async (req, res, next) => {
   try {
     const placesList = await Place.find({ type: "bookstore" }).select("name")
-    res.render("display-list/bookstores", { placesList })
+    res.render("bookstores/bookstores-index", { placesList })
   } catch (err) {
     next(err)
   }
