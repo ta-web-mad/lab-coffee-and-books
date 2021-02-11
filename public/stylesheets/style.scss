@@ -1,4 +1,18 @@
 body {
-  padding: 50px;
   font-family: sans-serif;
+  font-weight: 100;
+}
+
+h1, h2, h3 {
+  font-weight: 200;
+}
+
+.navbar {
+  margin-bottom: 50px;
+}
+
+#map,#coffee-map {
+  height: 400px;
+  width: 600px;
+  background-color: red;
 }

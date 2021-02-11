@@ -1,0 +1,26 @@
+
+
+<div class="container">
+
+  <h1>Listado de Cafeterías</h1>
+
+  <hr>
+
+  <ul>
+    {{#each coffees}}
+    <li>{{name}}
+      [<a href="/detalles/{{id}}">ver</a>]
+    </li>
+    {{/each}}
+  </ul>
+
+ <figure id="coffee-map"></figure>
+</div>
+<div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/javascripts/coffee-map.js"></script>
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXLZ6iOpMoDevAJAZ_z2QIVVH7JL2JhFI&callback=initMap">
+</script>
