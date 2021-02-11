@@ -8,13 +8,23 @@ mongoose.connect(`mongodb://localhost/${dbName}`, {
   useUnifiedTopology: true,
 })
 
-const coffeShops = [
+// const coffeShops = [
+//   {
+//     name: "cafecafe",
+//     type: "coffee shop",
+//   },
+// ]
+
+// Place.create(coffeShops)
+//   .then(() => mongoose.connection.close())
+//   .catch((err) => console.log(`Following error occured: \n ${err}`))
+
+const bookstores = [
   {
-    name: "cafecafe",
-    type: "coffee shop",
+    name: "booksbooks",
+    type: "bookstore",
   },
 ]
-
-Place.create(coffeShops)
+Place.create(bookstores)
   .then(() => mongoose.connection.close())
   .catch((err) => console.log(`Following error occured: \n ${err}`))
