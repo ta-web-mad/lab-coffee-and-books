@@ -29,8 +29,16 @@ router.post("/new", async (req, res, next) => {
     Place.create({ name, type: placeType })
     res.redirect("/")
   } catch (err) {
-    next
+    next(err)
   }
 })
 
+router.get("/details/:id", async (req, res, next) => {
+  try {
+    const place = await Place.findById(req.params.id)
+    res.render("place-details", place)
+  } catch (err) {
+    next(err)
+  }
+})
 module.exports = router
