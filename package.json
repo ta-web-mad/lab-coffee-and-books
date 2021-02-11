@@ -1,21 +1,22 @@
 {
-  "name": "express-generator",
+  "name": "books-coffee",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "DEBUG=express-generator:* nodemon ./bin/www",
+    "dev": "DEBUG=books-coffee:* nodemon ./bin/www",
     "dev-windows": "nodemon ./bin/www"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.3",
+    "debug": "^4.3.1",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "hbs": "^4.0.1",
     "mongoose": "^5.2.10",
     "morgan": "^1.9.0",
-    "debug": "^4.3.1",
     "node-sass-middleware": "^0.11.0"
   },
   "devDependencies": {

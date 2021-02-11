@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="col-9">
+      <h1>Mapa de {{title}}</h1>
+      <figure id="places-map"></figure>
+      <a href="/register-place" class="btn btn-dark">Registrar establecimiento</a>
+    </div>
+
+    <div class="col-3 mb-0 mt-2">
+      <h2>Calcular ruta</h2>
+      <hr class="mt-0">
+
+      <h4 class="text-right">Desde</h4>
+      <select class="form-control" id="start">
+        <option selected>Elige una opción</option>
+      </select>
+
+      <h4 class="text-right mt-4">Hasta</h4>
+      <select class="form-control" id="end">
+        <option selected>Elige una opción</option>
+      </select>
+
+      <div class="text-right mt-5">
+        <button id="calculate" class="btn btn-dark">Calcular</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/javascripts/map-styles.js"></script>
+<script src="/javascripts/places-map-config.js"></script>
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYv309kympOKtWAY4xVe6k6DEhwNDHMoA&callback=initMap"></script>
