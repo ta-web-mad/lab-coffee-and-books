@@ -1,5 +1,31 @@
 body {
-  padding: 50px;
   font-family: sans-serif; }
+
+.navbar-nav {
+  margin-left: 500px; }
+
+.navbar-nav li {
+  margin-left: 30px; }
+
+main {
+  margin: 50px; }
+
+h3 {
+  margin: 10px;
+  font-size: 40px;
+  color: #7c6832; }
+
+.type-index {
+  margin: 10px;
+  font-size: 20px;
+  font-style: oblique; }
+
+img {
+  margin-top: 20px;
+  width: 60%; }
+
+#map {
+  height: 400px;
+  background-color: red; }
 
 /*# sourceMappingURL=style.css.map */
