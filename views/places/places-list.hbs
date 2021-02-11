@@ -1,0 +1,38 @@
+<div class="container">
+
+  <div class="row justify-content-center">
+    <h2> Places </h2>
+    <hr>
+    <a class="btn btn-dark" href="/places/new">New</a>
+    <hr>
+    <div class="col-md-12">
+
+      <ul>
+        {{#each places}}
+        <li class="placesList">
+          {{this.name}}
+          <a class="btn btn-dark" href="/places/{{id}}">See more</a>
+          <a class="btn btn-dark" href="/places/{{id}}/edit">Edit</a>
+          <form method="POST" action="places/{{id}}/delete">
+            <button type="submit" class="btn btn-dark">Delete</button>
+          </form>
+          <hr>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Map</h1>
+
+    <figure id="map" class="placesMap"></figure>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/javascripts/map-styles.js"></script>
+    <script src="/javascripts/map-config.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWox-Ew5Z4Wm2OMqZSFRhM-IIwzPtxRgU&callback=initMap"></script>
+  </div>
+</div>
