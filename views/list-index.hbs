@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Check</h1>
+  {{#each placesList}}
+  <div class="row">
+    <div class="col-md-8">
+      <p>{{name}}</p>
+    </div>
+    <div class="col-md-4">
+      <a class="btn btn-dark" href="/details/:{{id}}">See more</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-10">
+      <hr>
+    </div>
+  </div>
+
+  {{/each}}
+</div>
