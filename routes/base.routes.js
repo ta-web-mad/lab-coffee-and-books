@@ -6,27 +6,22 @@ const Place = require("../models/place.model")
 router.get("/", (req, res) => res.render("index"))
 
 router.get("/index", async (req, res, next) => {
-  const placeType =
-    req.query.type === "coffee-shops" ? "coffee shop" : "bookstore"
   try {
-    const placesList = await Place.find({ type: placeType }).select("name")
+    const placesList = await Place.find({ type: req.query.type }).select("name")
     res.render("list-index", { placesList })
   } catch (err) {
     next(err)
   }
 })
 
-router.get("/new", (req, res) => {
-  const type = req.query.type
-  res.render("new-place", { type })
-})
+router.get("/new", (req, res) =>
+  res.render("new-place", { type: req.query.type })
+)
 
 router.post("/new", async (req, res, next) => {
-  const placeType =
-    req.query.type === "coffee-shops" ? "coffee shop" : "bookstore"
-  const { name } = req.body
+  const { name, type } = req.body
   try {
-    Place.create({ name, type: placeType })
+    Place.create({ name, type })
     res.redirect("/")
   } catch (err) {
     next(err)
@@ -52,8 +47,6 @@ router.get("/edit/:id", async (req, res, next) => {
 })
 
 router.post("/edit/:id", async (req, res, next) => {
-  const placeType =
-    req.query.type === "coffee-shops" ? "coffee shop" : "bookstore"
   const { name } = req.body
   try {
     await Place.findByIdAndUpdate(
@@ -62,6 +55,15 @@ router.post("/edit/:id", async (req, res, next) => {
       { omitUndefined: true }
     )
     res.redirect(`/details/${req.params.id}`)
+  } catch (err) {
+    next(err)
+  }
+})
+
+router.post("/delete/:id", async (req, res, next) => {
+  try {
+    const deletedPlace = await Place.findByIdAndDelete(req.params.id)
+    res.redirect(`/index?type=${deletedPlace.type}`)
   } catch (err) {
     next(err)
   }

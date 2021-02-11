@@ -11,7 +11,7 @@ mongoose.connect(`mongodb://localhost/${dbName}`, {
 // const coffeShops = [
 //   {
 //     name: "cafecafe",
-//     type: "coffee shop",
+//     type: "coffee-shop",
 //   },
 // ]
 
