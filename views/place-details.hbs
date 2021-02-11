@@ -2,17 +2,18 @@
   <div class="row mt-3">
     <div class="col-md-6">
       <div class="row">
-        <div class="col">{{name}}</div>
+        <div class="col">{{place.name}}</div>
       </div>
       <div class="row">
-        <div class="col">{{type}}</div>
+        <div class="col">{{place.type}}</div>
       </div>
     </div>
-    <div class="col-md-1"><a class="btn btn-dark" href="/edit/{{id}}">Edit</a></div>
+    <div class="col-md-1"><a class="btn btn-dark" href="/edit/{{place.id}}">Edit</a></div>
     <div class="col-md-1">
-      <form action="/delete/{{id}}" method="post">
+      <form action="/delete/{{place.id}}" method="post">
         <button class="btn btn-dark" type="submit">Delete</button>
       </form>
-
     </div>
   </div>
+
+</div>
