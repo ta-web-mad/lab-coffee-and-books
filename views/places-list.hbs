@@ -1,0 +1,28 @@
+<div class="container">
+
+  <div class="row justify-content-left">
+
+    <div class="col-md-12">
+
+      <br>
+
+      <h1>Este es el listado los lugares</h1>
+
+      <hr>
+
+      {{#each list}}
+
+      <ul>
+        <li><h4>{{name}}</h4></li>
+        <li>{{type}}</li>
+        <a href="/lugares/editar-lugar?id={{_id}}" class="btn btn-dark">Editar</a>
+        <a href="/lugares/delete?id={{id}}" class="btn btn-dark">Boorar</a>
+      </ul>
+
+      {{/each}}
+
+    </div>
+  </div>
+
+
+</div>
