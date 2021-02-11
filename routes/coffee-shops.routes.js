@@ -13,12 +13,15 @@ router.get("/", async (req, res, next) => {
 
 router.get("/new", (req, res) => res.render("coffee-shops/new"))
 
-router.post("/new", (req, res, next) => {
+router.post("/new", async (req, res, next) => {
   const { name } = req.body
   const placeType = "coffee shop"
-  Place.create({ name, type: placeType })
-    .then(res.redirect("/"))
-    .catch((err) => next(err))
+  try {
+    Place.create({ name, type: placeType })
+    res.redirect("/")
+  } catch (err) {
+    next
+  }
 })
 
 module.exports = router

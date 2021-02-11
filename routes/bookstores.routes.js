@@ -10,4 +10,18 @@ router.get("/", async (req, res, next) => {
     next(err)
   }
 })
+
+router.get("/new", (req, res) => res.render("bookstores/new"))
+
+router.post("/new", async (req, res, next) => {
+  const { name } = req.body
+  const placeType = "bookstore"
+  try {
+    Place.create({ name, type: placeType })
+    res.redirect("/")
+  } catch (err) {
+    next
+  }
+})
+
 module.exports = router
