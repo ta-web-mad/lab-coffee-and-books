@@ -1,0 +1,35 @@
+<div class="container">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+
+            <h1>Edit place</h1>
+
+            <hr>
+
+            <form method="POST" action="/places/edit/{{id}}">
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input name="name" type="text" class="form-control" id="name" value="{{name}}">
+                </div>
+
+                <div class="form-group">
+                  <label for="type">Type</label>
+                  <select name="type" id="type">
+                    <option value="select one">--Select one--</option>
+                    <option value="bookstore">Bookstore</option>
+                    <option value="coffee shop">Coffee shop</option>
+                  </select>
+                </div>
+
+                <button type="submit" class="btn btn-dark">Add new place</button>
+            </form>
+
+        <a href="/places">Back to list</a>
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,52 @@
+<div class="container">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+
+            <h1>Add new</h1>
+
+            <hr>
+
+            <form method="POST" action="/places/new-place">
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input name="name" type="text" class="form-control" id="name">
+                </div>
+
+                <div class="form-group">
+                  <label for="type">Type</label>
+                  <select name="type" id="type">
+                    <option value="select one">--Select one--</option>
+                    <option value="bookstore">Bookstore</option>
+                    <option value="coffee shop">Coffee shop</option>
+                  </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+
+                        <div class="form-group">
+                            <label for="latitude">Latitude</label>
+                            <input name="latitude" type="text" class="form-control" id="latitude">
+                        </div>
+
+                    </div>
+                    <div class="col">
+
+                        <div class="form-group">
+                            <label for="longitude">Longitude</label>
+                            <input name="longitude" type="text" class="form-control" id="longitude">
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-dark">Add new place</button>
+            </form>
+
+        </div>
+    </div>
+
+
+</div>

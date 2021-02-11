@@ -1,0 +1,22 @@
+<div class="container">
+
+    <h1>Places</h1>
+
+    <hr>
+
+    <ul>
+        {{#each places}}
+        <li>{{name}} ({{type}})</li>
+        <a href="/places/edit/{{id}}">Edit</a>
+        <form method="POST" action="/places/delete/{{id}}">
+            <button type="submit">Delete</button>
+        </form>
+        {{/each}}
+    </ul>
+
+    <a href="/places/new-place">Add new place</a>
+
+    {{#if error}}
+    <div class="error-message">{{error}}</div>
+    {{/if}}
+</div>
