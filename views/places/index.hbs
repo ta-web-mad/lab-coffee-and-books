@@ -1,0 +1,31 @@
+<figure id="places-map"></figure>
+
+<div class="container">
+  <div class="row justify-content-center">
+    {{#each places}}
+    <div class="col-4 place">
+      <h3>{{name}}</h3>
+      <p><strong>Type</strong>: {{type}}</p>
+      <hr>
+
+      <p class="text-center"><strong>Lat</strong>: {{location.coordinates.[0]}}, <strong>Lng</strong>:
+        {{location.coordinates.[1]}}</p>
+
+      <div class="row justify-content-around">
+        <a class="btn btn-dark btn-small" href="/places/edit/{{id}}">Edit</a>
+
+        <form action="/places/delete/{{id}}" method="POST">
+          <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+      </div>
+
+      
+    </div>
+    {{/each}}
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/javascripts/places-map-config.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEpmt_3BytzT8FRB3W0QhS9tHPscl4PS8&callback=initMap"></script>
+
