@@ -16,10 +16,17 @@ router.get('/', (req, res) => {
 
 router.get('/nuevo-lugar', (req, res) => res.render('places-new'))
 router.post('/nuevo-lugar', (req, res) => {
-  // console.log(req.body)
-  const { name, type } = req.body
+  console.log(req.body)
+
+  const { name, type, latitude, longitude } = req.body
+  
+  const location = {
+    type: 'Point',
+    coordinates: [latitude, longitude]
+  }
+  
   Place
-    .create({ name, type })
+    .create({ name, type, location })
     .then(newPlace => {
       console.log('Se ha creado este lugar: ', newPlace)
       res.redirect('/lugares')

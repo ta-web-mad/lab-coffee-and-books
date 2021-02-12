@@ -1,5 +1,21 @@
 body {
-  padding: 50px;
+  /* padding: 50px; */
   font-family: sans-serif; }
 
+/* main {
+  padding: 0px 50px;
+} */
+
 /*# sourceMappingURL=style.css.map */
+
+h1, h2, h3 {
+  font-weight: 200; }
+
+.navbar {
+  margin-bottom: 50px; }
+
+#map, #places-map {
+  height: 400px;
+  /* background-color: red;  */
+  margin-bottom: 40px;
+}

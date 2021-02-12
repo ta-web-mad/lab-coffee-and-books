@@ -4,8 +4,6 @@
 
     <div class="col-md-6">
 
-      <br>
-
       <h1>Editar lugar</h1>
 
       <hr>
@@ -26,7 +24,25 @@
           </select>
         </div>
 
-        <button type="submit" class="btn btn-dark">Finalizar edición</button>
+        <div class="form-row">
+          <div class="col">
+
+            <div class="form-group">
+              <label for="latitude">Latitud</label>
+              <input name="latitude" type="text" class="form-control" id="latitude">
+            </div>
+
+          </div>
+          <div class="col">
+
+            <div class="form-group">
+              <label for="longitude">Longitud</label>
+              <input name="longitude" type="text" class="form-control" id="longitude">
+            </div>
+          </div>
+
+          {{!-- <button type="submit" class="btn btn-dark">Crear nuevo libro</button> --}}
+          <button type="submit" class="btn btn-dark btn-block">Editar lugar</button>
       </form>
 
     </div>

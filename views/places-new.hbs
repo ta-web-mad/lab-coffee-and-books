@@ -4,8 +4,6 @@
 
     <div class="col-md-6">
 
-      <br>
-
       <h1>Nuevo lugar</h1>
 
       <hr>
@@ -17,16 +15,35 @@
           <input name="name" type="text" class="form-control" id="name">
         </div>
 
-        <div class="form-group">
-          <label for="tipo-list">Elige entre un Tipo:</label>
-          <select name="type" class="form-control" id="park-list">
-            <option>Seleccionar</option>
-            <option value="cafetería">Cafeteria</option>
-            <option value="librería">Libreria</option>
-          </select>
-        </div>
 
-        <button type="submit" class="btn btn-dark">Crear nuevo libro</button>
+          <div class="form-group">
+            <label for="tipo-list">Elige entre un Tipo:</label>
+            <select name="type" class="form-control" id="park-list">
+              <option>Seleccionar</option>
+              <option value="cafetería">cafeteria</option>
+              <option value="librería">libreria</option>
+            </select>
+          </div>
+
+        <div class="form-row">
+          <div class="col">
+
+            <div class="form-group">
+              <label for="latitude">Latitud</label>
+              <input name="latitude" type="text" class="form-control" id="latitude">
+            </div>
+
+          </div>
+          <div class="col">
+
+            <div class="form-group">
+              <label for="longitude">Longitud</label>
+              <input name="longitude" type="text" class="form-control" id="longitude">
+            </div>
+          </div>
+
+          {{!-- <button type="submit" class="btn btn-dark">Crear nuevo libro</button> --}}
+          <button type="submit" class="btn btn-dark btn-block">Crear lugar</button>
       </form>
 
     </div>

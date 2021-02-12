@@ -4,8 +4,6 @@
 
     <div class="col-md-12">
 
-      <br>
-
       <h1>Este es el listado los lugares</h1>
 
       <hr>
@@ -13,7 +11,9 @@
       {{#each list}}
 
       <ul>
-        <li><h4>{{name}}</h4></li>
+        <li>
+          <h4>{{name}}</h4>
+        </li>
         <li>{{type}}</li>
         <a href="/lugares/editar-lugar?id={{_id}}" class="btn btn-dark">Editar</a>
         <a href="/lugares/delete?id={{id}}" class="btn btn-dark">Boorar</a>
@@ -23,6 +23,22 @@
 
     </div>
   </div>
+  <br>
+  <br>
+  <h3>Localiza tu lugar</h3>
+  <hr>
 
+<figure id="map"></figure>
+
+    <script src="/javascripts/map-styles.js"></script>
+    <script src="/javascripts/map-directions.js"></script>
+    <script src="/javascripts/basic-map-config.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=HERE_YOUR_API_KEY&callback=initMap"></script>
+
+
+</div>
+
+<div>
 
 </div>
