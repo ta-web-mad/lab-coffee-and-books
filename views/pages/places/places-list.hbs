@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>Places list</h1>
+  <hr>
+
+  <div class="row">
+
+    <ul>
+      {{#each allPlaces}}
+
+      <li>
+        {{name}} | <a href="/lugares/detalle/{{id}}">View details</a>
+                 | <a href="/lugares/editar?place_id={{id}}">Edit</a>
+                 | <a href="/lugares/delete/{{id}}" style="color: red">Delete</a>
+
+      </li>
+
+      {{/each}}
+
+    </ul>
+
+  </div>
+
+  <hr>
+  <a href="/" class="btn btn-dark">Go back</a>
+   <a href="/lugares/crear" class="btn btn-dark">Add a new place</a> 
+
+</div> 

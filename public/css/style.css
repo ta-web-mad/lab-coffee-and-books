@@ -5,4 +5,12 @@ body {
 .navbar {
   margin-bottom: 50px; }
 
+#placesMap {
+  height: 60vh;
+  margin: 0;
+  background-color: red; }
+
+.boton {
+  margin-top: 15px; }
+
 /*# sourceMappingURL=style.css.map */
