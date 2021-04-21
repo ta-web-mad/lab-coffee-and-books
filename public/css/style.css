@@ -5,4 +5,15 @@ body {
 .navbar {
   margin-bottom: 50px; }
 
+.CoffeeShop-card, .coffee-exp {
+  color: brown; }
+
+.Bookstore-card, .book-exp {
+  color: blue; }
+
+#map {
+  height: 60vh;
+  margin: 0;
+  background-color: green; }
+
 /*# sourceMappingURL=style.css.map */

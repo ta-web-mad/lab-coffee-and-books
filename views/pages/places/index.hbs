@@ -1,0 +1,76 @@
+<div class="container">
+  <button><a href="/map">MAP!</a></button>
+  <h1>PLACES CRUD!</h1> 
+  <hr>
+  <div class="row">
+    <div class="col-4">
+      <h2>Read:</h2>
+      |<span class="coffee-exp">Coffee Shops</span>|<span class="book-exp">Bookstores</span>|
+      <hr>
+      <ul>
+        {{#each allPlaces}}
+        <li class="{{type}}-card">
+          <h4>{{name}}</h4>
+          <span>Lat: <b>{{location.coordinates.[0]}}</b>, <br>Long: <b>{{location.coordinates.[1]}}</b></span>
+          <form action="/places/{{id}}/edit" method="POST">
+            <button type="submit" class="mini-btn edit-btn">edit</button>
+          </form>
+          <form action="/places/{{id}}/delete" method="POST">
+            <button type="submit" class="mini-btn delete-btn">Delete</button>
+          </form>
+          <hr>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+    <div class="col-4">
+      <h2>Create:</h2>
+      <hr>
+      <form action="/places/create" method="POST" id="create-form">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name">
+        <hr>
+        <label for="type">Type:</label>
+        <select name="type" id="type">
+          <option value="CoffeeShop">Coffe Shop</option>
+          <option value="Bookstore">Bookstore</option>
+        </select>
+        <hr>
+        <label for="latitutde">Latitude:</label>
+        <input type="text" name="latitude" id="latitude">
+        <br>
+        <label for="laongitude">Longitude:</label>
+        <input type="text" name="longitude" id="longitude">
+        <hr>
+        <button type="submit" class="mini-btn create-btn">CREATE</button>
+      </form>
+    </div>
+    <div class="col-4">
+      <h2>Update:</h2>
+      <hr>
+      {{#if placeToEdit}}
+      {{#with placeToEdit}}
+      <form action="/places/{{id}}/update" method="POST" id="update-form">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" value="{{name}}">
+        <hr>
+        <label for="type">Type:</label>
+        <select name="type" id="type" value="">
+          <option value="CoffeeShop">Coffe Shop</option>
+          <option value="Bookstore">Bookstore</option>
+        </select>
+        <hr>
+        <label for="latitutde">Latitude:</label>
+        <input type="text" name="latitude" id="latitude" value="{{location.coordinates.[0]}}">
+        <br>
+        <label for="laongitude">Longitude:</label>
+        <input type="text" name="longitude" id="longitude" value="{{location.coordinates.[1]}}">
+        <hr>
+        <button type="submit" class="mini-btn update-btn">UPDATE</button>
+      </form>
+      {{/with}}
+      {{/if}}
+    </div>
+  </div>
+
+</div>
