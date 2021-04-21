@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Edit the place: {{place.name}}</h1>
+
+    <form method="POST" action="/places/{{place.id}}/edit">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" value="{{place.name}}">
+      <label for="type">Type</label>
+      <select id="type" name="type">
+        <option value="coffee shop">Coffee shop</option>
+        <option value="bookstore">Bookstore</option>
+      </select>
+      <label for="latitude">Latitude</label>
+      <input id="latitude" name="latitude" type="text" value="{{place.location.coordinates.[0]}}">
+      <label for="longitude">Longitude</label>
+      <input id="longitude" name="longitude" type="text" value="{{place.location.coordinates.[1]}}">
+      <button type="submit">Edit place</button>
+      <p>{{errorMessage}}</p>
+    </form>
+</div>

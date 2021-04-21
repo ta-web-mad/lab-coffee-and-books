@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Add a new place</h1>
+
+  <form method="POST" action="/places/new">
+  <label for="name">Name</label>
+  <input id="name" name="name" type="text">
+  <label for="type">Type</label>
+  <select id="type" name="type">
+    <option value="coffee shop">Coffee shop</option>
+    <option value="bookstore">Bookstore</option>
+  </select>
+  <label for="latitude">Latitude</label>
+  <input id="latitude" name="latitude" type="text">
+  <label for="longitude">Longitude</label>
+  <input id="longitude" name="longitude" type="text">
+  <button type="submit" >Create place</button>
+  </form>
+  <p>{{errorMessage}}</p>
+</div>

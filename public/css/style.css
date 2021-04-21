@@ -2,7 +2,27 @@ body {
   font-family: sans-serif;
   font-weight: 200; }
 
-.navbar {
-  margin-bottom: 50px; }
+#removing-form button {
+  margin: auto; }
+
+form label {
+  display: block;
+  font-weight: 600;
+  margin-top: 10px; }
+
+form input {
+  display: block; }
+
+form button {
+  margin-top: 25px; }
+
+#places-map {
+  height: 450px; }
+
+#single-place-map {
+  height: 450px; }
+
+.labels {
+  text-align: left; }
 
 /*# sourceMappingURL=style.css.map */

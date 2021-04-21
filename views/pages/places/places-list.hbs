@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>All the Coffee shops and Bookstores in your district</h1>
+  <ul>
+  {{#each allPlaces}}
+  <li><a href="/places/{{id}}">{{name}}</a> | <a href="/places/{{id}}/edit">Edit</a> <form id="removing-form" action="/places/{{id}}/delete" method="POST"><button type="submit">Delete</button></form></li>
+  {{/each}}
+  </ul>
+  <a href="/places/new">Add a new place!</a>
+
+  <figure id="places-map"></figure>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/js/mapstyles.js"></script>
+<script src="/js/map-places-app.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGzmnP1gTL3fh34Mz68rwKcwIlXfRA4-Q&callback=initMap"></script>
