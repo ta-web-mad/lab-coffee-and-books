@@ -1,0 +1,37 @@
+<div class="container">
+
+    <h1>Our favourite places</h1>
+    <hr>
+    <br>
+    <ul>
+
+        {{#each allPlaces}}
+        <li>
+            {{name}} ({{type}})
+            <br>
+            <a class="btn btn-outline-dark" href="/edit/{{id}}">Edit a place</a> |
+            <form action="/delete/{{id}}" method="POST" class="deleteForm">
+                <button class="btn btn-outline-danger">Delete this place</button>
+            </form>
+            <br>
+            <br>
+        </li>
+        {{/each}}
+    </ul>
+
+    <hr>
+    <br>
+    <a href="/" class="btn btn-dark">Go back to the home page</a>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <figure id="places-map"></figure>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/js/mapstyles.js"></script>
+<script src="/js/places-map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{key}}&callback=initMap"></script>

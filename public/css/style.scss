@@ -1,8 +1,23 @@
 body {
   font-family: sans-serif;
   font-weight: 200;
+  margin-bottom: 3em;
+}
+
+li {
+  list-style: none;
+  font-size: large;
+}
+
+.deleteForm {
+  display: inline;
 }
 
 .navbar {
   margin-bottom: 50px;
+}
+
+#places-map {
+  height: 60vh;
+  margin: 0;
 }
