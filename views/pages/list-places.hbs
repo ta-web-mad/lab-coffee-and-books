@@ -1,0 +1,8 @@
+{{#each data}}
+<p>
+  {{name}}
+<form action="/delete/{{id}}" method="POST"><button type="submit" class="btn btn-danger">Delete
+    places</button></form>
+<a class="btn btn-primary" href="/edit/{{id}}">Edit</a>
+</p>
+{{/each}}
