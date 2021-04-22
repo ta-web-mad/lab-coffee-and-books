@@ -1,8 +1,33 @@
-body {
-  font-family: sans-serif;
-  font-weight: 200; }
-
 .navbar {
   margin-bottom: 50px; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; }
+
+#route {
+  background-color: white;
+  position: absolute;
+  bottom: 25px;
+  left: 30px;
+  height: 60vh;
+  width: 35vw;
+  padding: 20px;
+  overflow-y: scroll; }
+
+#coffee-map {
+  height: 70vh;
+  background-color: red;
+  margin: 0; }
+
+h3 {
+  font-size: 16px; }
+
+.listOfCoffee {
+  margin-left: 60px; }
+
+.form-delete {
+  margin-top: 50px; }
 
 /*# sourceMappingURL=style.css.map */
