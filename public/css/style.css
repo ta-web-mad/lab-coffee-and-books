@@ -5,4 +5,9 @@ body {
 .navbar {
   margin-bottom: 50px; }
 
+#places-map {
+  height: 300px;
+  margin: 0;
+  background-color: red; }
+
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,29 @@
+<div class="container">
+  <h1>Listado de sitios de {{siteTitle}}</h1>
+  <hr>
+  <div class="row">
+    <div class="col-md-6">
+  <ul>
+    {{#each allPlaces}}
+    <li><strong>{{name}}</strong> - {{type}}
+      | <a href="/places/edit/{{id}}">Editar sitio</a>
+      <form method="POST" action="/places/delete/{{id}}">
+      <button type="submit" class="btn btn-sm btn-dark">Delete</button>
+    </form>
+    </li>
+    {{/each}}
+  </ul>
+  </div>
+  <div class="col-md-6">
+    <figure id="places-map"></figure>
+  </div>
+  </div>
+  <hr>
+  <a href="/places/create" class="btn btn-dark">Crear nuevo sitio</a>
+  <a href="/" class="btn btn-dark">Volver al incio</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/js/mapstyles.js"></script>
+<script src="/js/map-places-app.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=**************APIKEY*****************&callback=initMap"></script>
