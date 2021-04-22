@@ -24,6 +24,6 @@ const Place = mongoose.model('Place', placeSchema)
 
 module.exports = Place
 
-// AIzaSyARPDFgzauMJ8QUNvEJQq-HyfmGLWXPA0U
+
 
 
