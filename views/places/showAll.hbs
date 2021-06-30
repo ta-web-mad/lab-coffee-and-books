@@ -1,4 +1,30 @@
-<div id="placesMap"></div>
+{{!-- <div id="placesMap"></div> --}}
+
+<div class="container">
+    <div class="row">
+        <div class="col col-9" id="placesMap"></div>
+        <div class="col col-3">
+            <ul class="placesList">
+                {{#each movies }}
+                    <li>
+                        <div class="row">
+                            <div class="col col-5"><p>{{this.name}}  </p></div>
+                            <div class="col col-3">
+                                <a class="btn btn-warning btn-sm" href="/places/{{_id}}/edit">Edit</a>
+                            </div>
+                            <div class="col col-3">
+                                <form class="inline" action="/places/{{_id}}/delete" method="post">
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                </form>
+                            </div>
+                        </div>
+                    </li>
+                    <hr>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>
 
 <script src="/js/directions.js"></script>
 <script src="/js/mapStyles.js"></script>

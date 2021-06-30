@@ -18,20 +18,24 @@ function initMap() {
 function getPlacesData(myMap){
     axios.get('/api/places')
         .then( response => {
-            response.data.forEach( elem => printMarker(elem.location, myMap) )
+            response.data.forEach( elem => printMarker(elem.name, elem.location, myMap) )
 
         })
         .catch( err => console.log(err))
 
 }
 
-function printMarker(location, myMap){
+function printMarker(name, location, myMap){
 
     const { coordinates } = location
 
-    new google.maps.Marker({
+    new google.maps.Marker({        
         map: myMap,
-        position: {lat: coordinates[0], lng: coordinates[1]}
+        position: {lat: coordinates[0], lng: coordinates[1]},
+        label: {
+            fontSize: "5pt",
+            text: name
+        }
     })
 
 
