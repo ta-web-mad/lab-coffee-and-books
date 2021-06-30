@@ -1,0 +1,33 @@
+<div class="container">
+    <h1>Places's list</h1>
+        <div>
+
+            <hr>
+            {{#each places}}
+            <p>- {{name}}
+                <small>
+                    <a href="/places/edit/{{id}}">edit</a>
+                    |
+                    <a href="/places/delete/{{id}}" style="color: red">delete</a>
+                </small>
+            </p>
+            {{/each}}
+            <hr>
+            <h2>Find your favorite place and come visit us!</h2>
+            <br>
+
+
+        </div>
+
+    <div id="placesList"></div>
+        
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/places-map.js"></script>
+    
+    <script src="/js/mapStyles.js"></script>
+    
+
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZZi_CiiUzOh2eWzdmLldgsfya4C7uNP8&callback=initMap"></script>
+</div>

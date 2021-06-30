@@ -1,12 +1,22 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00b7ff;
+  text-decoration: none;
 }
 
 h1 {
   color: 15px;
 }
+
+#myMap, #placesList {
+  height: 500px;
+  background-color: red;
+}
+
+nav {
+  margin-bottom: 50px;
+}
+
