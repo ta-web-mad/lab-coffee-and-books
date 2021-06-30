@@ -1,0 +1,41 @@
+<div class="container">
+
+    <h2>Places</h2>
+
+    <a href="/places/new" class="btn btn-custom vertical-margin-2">Add a new place</a>
+
+    <ul class="row gy-2">
+
+        {{#each places}}
+        <li class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="container-fluid reset-padding padding-3">
+                <div class="row g-0 gy-0">
+
+                    <h3>{{name}}</h3>
+
+                    <a href="/places/{{id}}" class="btn btn-custom">Details</a>
+
+                </div>
+            </div>
+        </li>
+        {{/each}}
+
+    </ul>
+
+    <a href="/">Go back</a>
+
+</div>
+<div class="container">
+    <div class="row vertical-margin-3 text-align-center justify-content-center">
+        <div class="col-8">
+            <div id="places-list-map"></div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script src="/js/mapStyles.js"></script>
+<script src="/js/places-map.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key={{MAPS_KEY}}&callback=initMap"></script>
