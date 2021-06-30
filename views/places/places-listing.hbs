@@ -1,0 +1,27 @@
+<h1>PLACES LISTING</h1>
+
+<hr>
+{{#each places}}
+
+<P><strong>Name</strong>  : {{name}} </P> 
+<br>
+<P><strong>Type</strong> : {{type}}</P> 
+
+<P><strong>location</strong> : {{location.coordinates}}</P>
+
+<p><a href="/places/editplace/{{id}}">Edit this place</a></p>
+
+    
+<hr>
+<p><form action="/places/deleteplace/{{id}}" method="post"></form>
+
+    <button type="submit" class="btn btn-dark btn-smll"></a>Delete this place </button>
+
+</form>
+    
+    
+    
+<br>
+<hr>
+
+{{/each}}

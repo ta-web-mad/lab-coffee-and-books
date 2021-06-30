@@ -1,0 +1,54 @@
+<div class="container">
+
+    <h2>EDIT A PLACE</h2>
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+
+
+
+            <hr>
+
+            <form action="/places/editplace/{{id}}" method="POST">
+
+                <div class="form-group">
+                   <label for="name"><strong>Current name:</strong>  {{name}}</label>
+                   <hr>
+                    <p><strong>NEW NAME:</strong>  </p>
+                    <input type="text" class="form-control" name="name" id="name">
+                </div>
+
+                <div class="form-group">
+                    <label for="type">Choose a type:</label>
+
+                    <select name="type" id="type" multiple>
+
+                        {{!-- hay que iterar sobre celebrities aqui para poder tenerlos disponibles --}}
+                        <option value="bookstore">Book Store</option>
+                        <option value="coffee shop">Coffee Shop</option>
+                        {{!-- primero identificamos cada celebrity con su id
+                        y despues reflejamos a cada uno con su atributo name en el campo de selección del user --}}
+
+                    </select>
+                </div>
+                <label>Current Latitud => 
+                    <input name="lat" type="text" id="location[0]">
+                </input>
+                <br><br>
+                
+                <label>Current Longitud => 
+                    <input name="lng" type="number" id="location[1]">
+                </label>
+                <br><br>
+
+
+                <button type="submit" class="btn btn-dark btn-block btn-lg">Edit place </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
