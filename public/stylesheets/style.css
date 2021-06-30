@@ -1,12 +1,13 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00b7ff;
+
+.navbar {
+  margin-bottom: 50px;
 }
 
-h1 {
-  color: 15px;
+#placesList {
+  height: 500px;
+  background-color: red;
 }

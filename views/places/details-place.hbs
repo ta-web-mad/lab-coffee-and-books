@@ -1,0 +1,38 @@
+<div class="container">
+
+    <h1>Coffe & Books Details</h1>
+    <hr>
+    <br>
+    <div class="row justify-content-between">
+        <div class="col-md-4">
+            <h1>{{name}}</h1>
+        </div>
+        <div class="col-md-4 ">
+            <div class="btn-group">
+                <form action="/places/{{id}}/delete" method="POST">
+                    <button type="submit" class="btn btn-danger btn-lg mr-2">Eliminar</button>
+                </form>
+                <br>
+                <a class="btn btn-primary btn-lg" href="/places/{{id}}/edit">Editar</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8 flex-row">
+            <h4>{{type}}</h4>
+        </div>
+        <div class="col-md-4">
+            <br>
+            <h6><strong>Ubicación</strong>:</h6>
+            <br>
+            <p><strong>Latitud</strong>: {{location.coordinates.[0]}}</p>
+            <p><strong>Longitud</strong>: {{location.coordinates.[1]}}</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <a href="/places" class=" btn btn-dark">Volver al listado</a>
+
+</div>
