@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>{{title}}</title>
-      <link rel="stylesheet" href="/stylesheets/style.css" />
-   </head>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>{{title}}</title>
+   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
 
-   <body>
+<body>
+   <nav>
+      <ul>
+         <li><a href="/">Inicio</a></li>
+         <li><a href='/places'>Places</a></li>
+         <li><a href='/maps'>Maps</a></li>
+      </ul>
+   </nav>
 
-      {{{body}}}
+   {{{body}}}
 
-      <script src="/js/script.js"></script>
-   </body>
+   <script src='https:maps.googleapis.com/maps/api/js?key={{process.env.API_KEY}}&callback=initMap'></script>
+   <script src="/js/script.js"></script>
+
+</body>
 
 </html>
