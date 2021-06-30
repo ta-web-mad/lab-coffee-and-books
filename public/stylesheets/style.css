@@ -1,3 +1,5 @@
+
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -5,8 +7,38 @@ body {
 
 a {
   color: #00b7ff;
+  text-decoration: none;
 }
 
 h1 {
   color: 15px;
+}
+
+#myMap, #restaurantsList {
+  height: 500px;
+  background-color: red;
+}
+
+nav {
+  padding: 30px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav li {
+  margin: 0px 10px;
+}
+
+/* Set the size of the div element that contains the map */
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
 }

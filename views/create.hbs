@@ -1,0 +1,46 @@
+<div class="container">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+
+            <h1>Iniciar sesión</h1>
+
+            <hr>
+
+            <form action="/create" method="POST">
+
+                <div class="form-group">
+                    <label for="name">name</label>
+                    <input type="text" class="form-control" name="name" id="name">
+                </div>
+
+                <div class="form-group">
+                    <label for="type">type</label>
+                    <input type="text" class="form-control" name="type" id="type">
+                </div>
+
+                <div class="form-group">
+                    <label for="lat">lat</label>
+                    <input type="text" class="form-control" name="lat" id="lat">
+                </div>
+
+                <div class="form-group">
+                    <label for="lng">type</label>
+                    <input type="text" class="form-control" name="lng" id="lng">
+                </div>
+
+                <button type="submit" class="btn btn-dark btn-block btn-lg">create marker</button>
+
+            </form>
+            {{#if errorMessage}}
+            <div
+                style="margin-top: 20px; padding: 5px; color: white; background: red; text-align: center; font-size: .95em">
+                {{errorMessage}}
+            </div>
+            {{/if}}
+        </div>
+
+    </div>
+
+</div>
