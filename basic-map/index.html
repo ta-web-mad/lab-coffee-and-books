@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        #myMap {
+            height: 500px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="myMap"></div>
+
+    <script src="mapStyles.js"></script>
+    <script src="directions.js"></script>
+
+    <script>
+
+        function initMap() {
+
+            const myMap = new google.maps.Map(
+                document.querySelector('#myMap'),
+                {
+                    zoom: 16,
+                    center: directions.ironhackBCN.coords,
+                    styles: mapStyles.silver
+                }
+            )
+        }
+
+
+    </script>
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKvU2rxm0HMbYos8YBWLS6orxqlcmWSzM&callback&callback=initMap"></script>
+
+
+</body>
+
+</html>

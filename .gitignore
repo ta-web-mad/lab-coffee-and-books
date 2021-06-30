@@ -6,3 +6,4 @@ npm-debug.log
 
 # Environment Variables should NEVER be published
 .env
+key=AIzaSyBKvU2rxm0HMbYos8YBWLS6orxqlcmWSzM

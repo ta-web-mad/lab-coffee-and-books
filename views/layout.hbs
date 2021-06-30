@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>{{title}}</title>
-      <link rel="stylesheet" href="/stylesheets/style.css" />
-   </head>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>{{title}}</title>
+   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
 
-   <body>
+<body>
+   <nav>
+      <ul>
+         <li><a href="/">Inicio</a></li>
+         <li><a href="/mapas/basico">Mapa básico</a></li>
+         <li><a href="/lugar/lista">Listado de lugares (mapa)</a></li>
+         <li><a href="/lugar/crear">Crear lugar</a></li>
+         <li><a href="/api/lugares">Listado de lugares (json)</a></li>
+      </ul>
+   </nav>
+   {{{body}}}
 
-      {{{body}}}
-
-      <script src="/js/script.js"></script>
-   </body>
+   <script src="/js/script.js"></script>
+</body>
 
 </html>

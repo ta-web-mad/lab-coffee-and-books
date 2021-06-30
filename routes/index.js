@@ -1,8 +1,6 @@
-const router = require("express").Router();
-
-/* GET home page */
-router.get("/", (req, res, next) => {
-  res.render("index");
-});
-
-module.exports = router;
+module.exports = app => {
+    app.use('/', require('./base.routes'))
+    // app.use('/mapas', require('./map.routes'))
+    app.use('/lugar', require('./place.routes'))
+    app.use('/api', require('./api.routes'))
+}
