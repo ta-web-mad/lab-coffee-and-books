@@ -1,0 +1,17 @@
+<div class="container">
+
+    <h1>Coffe & Books</h1>
+    <hr>
+
+    {{#each places}}
+    <h4>- <a href="/places/{{id}}">{{name}}</a></h4>
+    <p>
+        <small>
+            <a href="/places/{{id}}/edit">Editar</a> |
+            <a href="/places/{{id}}/delete">Eliminar</a>
+        </small>
+    </p>
+    <br>
+    {{/each}}
+
+</div>
