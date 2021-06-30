@@ -1,12 +1,24 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00b7ff;
+    color: #00b7ff;
 }
 
 h1 {
-  color: 15px;
+    color: 15px;
+}
+
+#places-list {
+    position: absolute;
+    left: 35%;
+    top: 500px;
+    background: grey;
+    min-height: 100px;
+    width: 20%;
+    min-width: 200px !important;
+    z-index: 1;
+    padding: 20px;
+    border-radius: 5px;
 }

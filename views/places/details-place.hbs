@@ -1,0 +1,17 @@
+<div class='container'>
+
+    <h2 class='pt-5'>{{name}}</h2>
+
+    <div id='map' style='height: 500px;' class='bg-dark'>
+
+    </div>
+
+    <a href='/places/delete/{{id}}' class='btn btn-danger mt-5 d-block ml-auto mr-auto'>Delete this place</a>
+
+    <script src='https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js'></script>
+
+    <script src='../../js/apiHandler.js'></script>
+    <script src='/js/gmaps.js'></script>
+    <script src='https://maps.googleapis.com/maps/api/js?key={{myApiCode}}&callback=initMap'></script>
+
+</div>
