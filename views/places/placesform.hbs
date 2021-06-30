@@ -1,0 +1,69 @@
+<div class="container">
+
+    <h2>CREATING A PLACE</h2>
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+
+
+
+            <hr>
+
+            <form action="/places/placesform" method="POST">
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" name="name" id="name">
+                </div>
+
+                <div class="form-group">
+                    <label for="type">Choose a type:</label>
+
+                    <select name="type" id="type" multiple>
+
+                        {{!-- hay que iterar sobre celebrities aqui para poder tenerlos disponibles --}}
+                        <option value="bookstore">bookstore</option>
+                        <option value="coffee shop">Coffee Shop</option>
+                        {{!-- primero identificamos cada celebrity con su id
+                        y despues reflejamos a cada uno con su atributo name en el campo de selección del user --}}
+
+                    </select>
+                </div>
+
+
+                <label>Latitud
+                    <input name="lat" type="text" id="location">
+                </label>
+                <br><br>
+
+                <label>Longitud
+                    <input name="lng" type="text" id="location">
+                </label>
+                <br><br>
+
+
+
+
+                <button type="submit" class="btn btn-dark btn-block btn-lg">Create place </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="/js/directions.js"></script>
+    <script src="/js/mapStyles.js"></script>
+    <script src="/js/map-setup.js"></script>
+
+
+
+
+
+    {{!-- //falta meter la función --}}
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAC-RsNwk8s6EfqqeelF-1K0UBrjWVtqAM&callback=initMap"></script>
+
+</div>
