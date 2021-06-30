@@ -1,0 +1,23 @@
+<div class="container">
+
+    <h2>LISTADO DE LUGARES</h2>
+    <hr>
+    <br>
+
+    {{#each place}}
+    <p>- {{name}}
+
+        <small>
+            <a class="btn btn-primary" href="lugares/detalles">detalles</a>
+
+            <a class="btn btn-primary" href="#">editar</a>
+
+            <a class="btn btn-primary" href="#">eliminar</a>
+
+
+        </small>
+    </p>
+    {{/each}}
+
+</div>
+<a class="btn btn-primary" href="/" role="button">Inicio</a>

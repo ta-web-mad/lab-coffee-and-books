@@ -1,0 +1,37 @@
+<div class="container">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+
+            <h1>NUEVO LUGAR</h1>
+            <hr>
+            <form action="/lugares/crear" method="POST">
+                <!--action envia los resultados-->
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" class="form-control" name="name" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="type">Tipo</label>
+                    <input type="text" class="form-control" name="type" id="type">
+                </div>
+                <div class="form-group">
+                    <label for="latitude">Latitud</label>
+                    <input name="latitude" type="text" class="form-control" id="latitude">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="longitude">Longitud</label>
+                    <input name="longitude" type="text" class="form-control" id="longitude">
+                </div>
+                <button type="submit" class="btn btn-dark btn-block btn-lg">Crear</button>
+                <br>
+                <a class="btn btn-primary" href="/lugares" role="button">lugares</a>
+            </form>
+        </div>
+
+    </div>
+
+</div>
