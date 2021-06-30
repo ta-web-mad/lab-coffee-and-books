@@ -1,0 +1,17 @@
+<h1>Edit a place</h1>
+
+<form method="POST" action="/places/edit?place_id={{id}}">
+
+    <label>Name:
+        <input name="name" type="text" value="{{name}}">
+    </label>
+    <br><br>
+
+    <label>Type:
+        <input name="description" type="text" value="{{type}}">
+    </label>
+    <br><br>
+
+    <input type="submit" value="Edit place">
+
+</form>
