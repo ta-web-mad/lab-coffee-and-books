@@ -10,3 +10,9 @@ a {
 h1 {
   color: 15px;
 }
+
+
+#placesList {
+  height: 500px;
+  background-color: red;
+}
