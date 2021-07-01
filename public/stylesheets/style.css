@@ -10,3 +10,8 @@ a {
 h1 {
   color: 15px;
 }
+
+#myMap, #placesList {
+  height: 500px;
+  background-color: red;
+}
